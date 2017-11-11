@@ -1,9 +1,10 @@
-# Based on the formula from homebrew-core
+# Based on the formula from homebrew-core.
 
-class Gstreamer < Formula
+class GstreamerOleavr < Formula
   desc "Development framework for multimedia applications"
   homepage "https://gstreamer.freedesktop.org/"
   url "git://github.com/oleavr/gstreamer.git"
+  version "1.12.0.r189.ge1f039b7f"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
@@ -14,6 +15,8 @@ class Gstreamer < Formula
   depends_on "gettext"
   depends_on "glib"
   depends_on "bison"
+
+  conflicts_with "gstreamer"
 
   def install
     args = %W[
@@ -41,14 +44,6 @@ class Gstreamer < Formula
     system "./configure", *args
     system "make"
     system "make", "install"
-  end
-
-  def caveats; <<~EOS
-    Consider also installing gst-plugins-base and gst-plugins-good.
-
-    The gst-plugins-* packages contain gstreamer-video-1.0, gstreamer-audio-1.0,
-    and other components needed by most gstreamer applications.
-    EOS
   end
 
   test do

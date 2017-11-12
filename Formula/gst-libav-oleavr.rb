@@ -6,6 +6,11 @@ class GstLibavOleavr < Formula
   url "git://github.com/oleavr/gst-libav.git"
   version "1.12.0.r30.gc97d498"
 
+  bottle do
+    root_url "https://github.com/oleavr/gst-libav/releases/download/1.12.0.r30"
+    sha256 "e821b93c5f2128a5f5f35ccb97428d88a598109a0ddf18dd6ad3398062cfa513" => :high_sierra
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build

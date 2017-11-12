@@ -6,6 +6,12 @@ class LibniceOleavr < Formula
   url "https://nice.freedesktop.org/releases/libnice-0.1.14.tar.gz"
   sha256 "be120ba95d4490436f0da077ffa8f767bf727b82decf2bf499e39becc027809c"
 
+  bottle do
+    cellar :any
+    root_url "https://github.com/oleavr/homebrew-gstreamer/releases/download/1.0.0"
+    sha256 "2824095a72975a653f2b51f8f8b45b63d335e8647a285b1fe857604828c32398" => :high_sierra
+  end
+
   depends_on "pkg-config" => :build
   depends_on "glib"
   depends_on "gnutls"

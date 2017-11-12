@@ -6,6 +6,11 @@ class GstPluginsUglyOleavr < Formula
   url "git://github.com/oleavr/gst-plugins-ugly.git"
   version "1.12.0.r38.g83d7d2f6"
 
+  bottle do
+    root_url "https://github.com/oleavr/gst-plugins-ugly/releases/download/1.12.0.r38"
+    sha256 "71c6aff5d767e0a0c28cb5d07728b3f954d0f030b052a5724d3663190e27e473" => :high_sierra
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build

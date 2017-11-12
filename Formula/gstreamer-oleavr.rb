@@ -6,6 +6,11 @@ class GstreamerOleavr < Formula
   url "git://github.com/oleavr/gstreamer.git"
   version "1.12.0.r189.ge1f039b7f"
 
+  bottle do
+    root_url "https://github.com/oleavr/gstreamer/releases/download/1.12.0.r189"
+    sha256 "d27e7b4af20a89a49ebda3a39c96ce30e336b406ecbfb116cb7fd0db0ae13a03" => :high_sierra
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build

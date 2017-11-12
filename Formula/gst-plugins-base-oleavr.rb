@@ -6,6 +6,11 @@ class GstPluginsBaseOleavr < Formula
   url "git://github.com/oleavr/gst-plugins-base.git"
   version "1.12.0.r218.gb9aaa7f4f"
 
+  bottle do
+    root_url "https://github.com/oleavr/gst-plugins-base/releases/download/1.12.0.r218"
+    sha256 "5ee40d04cd594d0181816017b200ee1fab3fb1a1367c2db46e4725c5af4da97d" => :high_sierra
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
